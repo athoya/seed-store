@@ -1,0 +1,145 @@
+{
+  "identifier" : "B82C3ED5",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "FD28E24D",
+      "localizations" : [
+        {
+          "description" : "60",
+          "displayName" : "60 Seeds",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "consumables.athoya.starter.60",
+      "referenceName" : "60 Seed",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "0EA873F9",
+      "localizations" : [
+        {
+          "description" : "120",
+          "displayName" : "120 Seeds",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "consumables.athoya.starter.120",
+      "referenceName" : "120 Seed",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "3.99",
+      "familyShareable" : false,
+      "internalID" : "2CD812CB",
+      "localizations" : [
+        {
+          "description" : "240",
+          "displayName" : "240 Seeds",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "consumables.athoya.starter.240",
+      "referenceName" : "240 Seed",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "A7274B1D",
+      "localizations" : [
+
+      ],
+      "name" : "Unlock Plus",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "44.99",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "C6402A65",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Unlock plus membership",
+              "displayName" : "Subscribe Annually",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "subscription.athoya.starter.annual",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual",
+          "subscriptionGroupID" : "A7274B1D",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
