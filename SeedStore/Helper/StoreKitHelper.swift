@@ -14,13 +14,15 @@ public enum StoreError: Error {
     case unknownError
 }
 
-class StoreKitHelper {    
+class StoreKitHelper {
+    // create variable to listen the transaction
     var transactionListener: Task<Void, Error>? = nil
     
     deinit {
         transactionListener?.cancel()
     }
     
+    // If your app has unfinished transactions, the updates listener receives them once, immediately after the app launches. Without the Task to listen for these transactions, your app may miss them.
     private func createTransactionTask() -> Task<Void, Error> {
         return Task.detached {
             for await update in Transaction.updates {
@@ -35,16 +37,12 @@ class StoreKitHelper {
         }
     }
     
+    // Configure the helper to asign the transaction listener
     func configure() async throws {
-        do {
-            transactionListener = createTransactionTask()
-//            try await retrieveAllProducts()
-//            try await updateUserPurchases()
-        } catch {
-            throw error
-        }
+        transactionListener = createTransactionTask()
     }
     
+    // A function to check whether the transaction is valid
     func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         //Check whether the JWS passes StoreKit verification.
         switch result {
@@ -57,22 +55,10 @@ class StoreKitHelper {
         }
     }
     
+    // Wrapper function to call purchase from app store, return purchased product as result
     func purchase(product: Product) async throws -> Result<Product, Error> {
-        let result = try await product.purchase()
-        
-        switch(result) {
-        case .success(let verification):
-            let transaction = try checkVerified(verification)
-            print("Success")
-            await transaction.finish()
-            return .success(product)
-        case .userCancelled:
-            print("Cancelled by user")
-            return .failure(StoreError.userCancelled)
-        default:
-            print("Unknown error")
-            return .failure(StoreError.unknownError)
-        }
+        // 4. purchase the product and determine the transaction status
+        return .failure(StoreError.unknownError)
     }
     
 }

@@ -20,15 +20,13 @@ struct ContentView: View {
                     .font(.title)
             ForEach(viewModel.products) { product in
                 ProductItemView(product: product) { item in
-                    Task {
-                        try await viewModel.purchase(product: item)
-                    }
+                    // 3. When tapped, buy the product by calling function from viewModel
                 }
             }
         }
         .padding()
         .task {
-            await viewModel.getProducts()
+            // 2. on appear, fetch the product from viewModel
         }
     }
 }
